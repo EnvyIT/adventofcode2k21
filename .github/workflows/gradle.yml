@@ -26,4 +26,5 @@ jobs:
           java-version: '16'
           distribution: 'adopt'
           cache: 'gradle'
+      - name: Test
         run: ./gradlew build --no-daemon
