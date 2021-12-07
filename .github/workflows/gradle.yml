@@ -24,8 +24,6 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '16'
-          distribution: 'open'
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
-      - name: Build with Gradle
-        run: ./gradlew build test
+          distribution: 'adopt'
+          cache: 'gradle'
+        run: ./gradlew build --no-daemon
